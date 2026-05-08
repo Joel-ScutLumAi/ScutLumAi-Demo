@@ -37,7 +37,6 @@
       color: #F0F4F8;
     }
 
-    /* C2 — Header pill now communicates value */
     .pill {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 10px;
@@ -48,7 +47,6 @@
       border: 0.5px solid rgba(168, 184, 204, 0.15);
     }
 
-    /* C3 — Header right now honest, not architectural */
     .header-right {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
@@ -80,7 +78,6 @@
       margin-bottom: 12px;
     }
 
-    /* C4 — Concept prototype honesty note */
     .concept-note {
       font-size: 12px;
       line-height: 1.7;
@@ -104,7 +101,6 @@
 
     .disclaimer strong { font-weight: 500; color: #F0F4F8; }
 
-    /* TR1 — Provenance note */
     .sample-provenance {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 10px;
@@ -150,10 +146,9 @@
     .sample-btn.active {
       background: #1A3354;
       border: 0.5px solid rgba(255, 255, 255, 0.08);
-      border-left: 3px solid #8BA3BC;
+      border-left: 3px solid rgba(139, 163, 188, 0.4);
     }
 
-    /* T1 — Focus-visible for keyboard navigation */
     .sample-btn:focus-visible {
       outline: 2px solid #8BA3BC;
       outline-offset: 2px;
@@ -172,37 +167,7 @@
     .sample-sentence { font-size: 13px; color: #F0F4F8; margin-bottom: 3px; line-height: 1.55; }
     .sample-btn.active .sample-sentence { font-weight: 500; color: #F0F4F8; }
 
-    /* U2 — Single‑hue information design. No red/green/yellow */
-    .state-box {
-      padding: 14px 16px;
-      border-radius: 10px;
-      border: 0.5px solid rgba(139, 163, 188, 0.25);
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    .state-label-small {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.06em;
-      color: rgba(139, 163, 188, 0.65);
-      margin-bottom: 4px;
-    }
-
-    .state-name {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 6px;
-      color: #F0F4F8;
-    }
-
-    .state-description {
-      font-size: 12px;
-      line-height: 1.65;
-      color: rgba(139, 163, 188, 0.85);
-    }
-
-    /* T2 — Taxonomy label now CSS‑class‑driven using data attributes */
+    /* Neutral state label on cards – no icon, no colour difference */
     .taxonomy-label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
@@ -210,21 +175,13 @@
       border-radius: 4px;
       display: inline-block;
       margin-top: 6px;
-      border: 0.5px solid;
+      color: rgba(139, 163, 188, 0.9);
+      background: rgba(255, 255, 255, 0.02);
+      border: 0.5px solid rgba(139, 163, 188, 0.2);
     }
 
-    /* U2/U3 — Icon‑prefixed state names, monochrome taxonomy colours */
-    .taxonomy-label[data-type="unaccompanied"]     { color: #F0F4F8; background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); }
-    .taxonomy-label[data-type="fully-accompanied"]  { color: #F0F4F8; background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); }
-    .taxonomy-label[data-type="hedged"]             { color: #F0F4F8; background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); }
-    .taxonomy-label[data-type="partially"]          { color: #F0F4F8; background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); }
-    .taxonomy-label[data-type="cascading"]          { color: #F0F4F8; background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); }
-
-    /* Badges — preserved for micro‑signal clarity, reduced chroma */
-    .badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 2px 8px; border-radius: 6px; margin-right: 4px; margin-bottom: 4px; border: 0.5px solid; }
-    .badge-confidence { background: rgba(255,255,255,0.04); color: #C8D6E5; border-color: rgba(255,255,255,0.1); }
-    .badge-support { background: rgba(255,255,255,0.04); color: #C8D6E5; border-color: rgba(255,255,255,0.1); }
-    .badge-modifier { background: rgba(255,255,255,0.04); color: #8BA3BC; border-color: rgba(255,255,255,0.08); }
+    /* Badges — descriptive micro‑signals, monochrome */
+    .badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 2px 8px; border-radius: 6px; margin-right: 4px; margin-bottom: 4px; border: 0.5px solid rgba(139, 163, 188, 0.2); color: #C8D6E5; background: rgba(255,255,255,0.03); }
     .none-detected { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(139, 163, 188, 0.35); }
 
     .output-panel {
@@ -273,7 +230,39 @@
 
     .modifiers-row { margin-bottom: 20px; }
 
-    /* TR2 — Strengthened output footer */
+    /* Completely neutral state box – single thin left border, no icon, no colour variation */
+    .state-box {
+      padding: 14px 16px;
+      border-radius: 0 10px 10px 0;
+      background: rgba(255, 255, 255, 0.015);
+      border-left: 3px solid rgba(139, 163, 188, 0.25);
+      border-top: 0.5px solid rgba(255,255,255,0.05);
+      border-right: 0.5px solid rgba(255,255,255,0.05);
+      border-bottom: 0.5px solid rgba(255,255,255,0.05);
+    }
+
+    .state-label-small {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: rgba(139, 163, 188, 0.65);
+      margin-bottom: 4px;
+    }
+
+    .state-name {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #F0F4F8;
+    }
+
+    .state-description {
+      font-size: 12px;
+      line-height: 1.65;
+      color: rgba(139, 163, 188, 0.85);
+    }
+
     .output-footer {
       padding: 12px 24px;
       border-top: 0.5px solid rgba(255, 255, 255, 0.08);
@@ -281,6 +270,15 @@
       font-family: 'IBM Plex Mono', monospace;
       font-size: 10px;
       color: #8BA3BC;
+      line-height: 1.6;
+    }
+
+    .next-step {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: rgba(139, 163, 188, 0.45);
+      margin-top: 10px;
+      text-align: center;
       line-height: 1.6;
     }
 
@@ -294,25 +292,94 @@
       color: #8BA3BC;
     }
 
-    /* U5 — Next‑step prompt */
-    .next-step {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: rgba(139, 163, 188, 0.45);
-      margin-top: 10px;
-      text-align: center;
-      line-height: 1.6;
+    /* Gated “Test your own” section */
+    .test-own-section {
+      margin-top: 40px;
+      border-top: 0.5px solid rgba(255,255,255,0.08);
+      padding-top: 32px;
     }
 
-    footer {
-      max-width: 760px;
-      margin: 48px auto 0;
-      padding: 24px 24px 40px;
-      border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+    .test-own-heading {
+      font-size: 15px;
+      font-weight: 500;
+      color: #F0F4F8;
+      margin-bottom: 8px;
+    }
+
+    .test-own-sub {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #8BA3BC;
+      margin-bottom: 18px;
+      max-width: 500px;
+    }
+
+    .test-own-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .test-own-form label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
       color: #8BA3BC;
-      line-height: 1.8;
+      letter-spacing: 0.04em;
+    }
+
+    .test-own-form textarea,
+    .test-own-form input[type="email"] {
+      background: #132540;
+      border: 0.5px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #F0F4F8;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .test-own-form textarea:focus,
+    .test-own-form input[type="email"]:focus {
+      outline: 2px solid #8BA3BC;
+      outline-offset: 1px;
+    }
+
+    .test-own-form button {
+      background: #1A3354;
+      border: 0.5px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 10px 20px;
+      color: #F0F4F8;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.15s;
+      align-self: flex-start;
+    }
+
+    .test-own-form button:hover {
+      background: #243B5A;
+    }
+
+    .test-own-disclaimer {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: rgba(139,163,188,0.4);
+      margin-top: -6px;
+      line-height: 1.5;
+    }
+
+    .form-confirmation {
+      margin-top: 16px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: #C8D6E5;
+      background: rgba(255,255,255,0.03);
+      border: 0.5px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 14px 18px;
     }
 
     .cta-block {
@@ -335,13 +402,23 @@
 
     .cta-block a:hover { color: #F0F4F8; }
 
-    /* TR3 — Final trust note */
     .cta-note {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 10px;
       color: rgba(139, 163, 188, 0.35);
       margin-top: 8px;
       line-height: 1.6;
+    }
+
+    footer {
+      max-width: 760px;
+      margin: 48px auto 0;
+      padding: 24px 24px 40px;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: #8BA3BC;
+      line-height: 1.8;
     }
 
     @media (max-width: 600px) {
@@ -356,47 +433,68 @@
 <header>
   <div class="header-left">
     <span class="logo">ScutLumAi</span>
-    <!-- C2 — Value‑communicating pill -->
     <span class="pill">SENTENCE‑LEVEL EVIDENCE MAPPING</span>
   </div>
-  <!-- C3 — Honest version label -->
-  <span class="header-right">Pre‑release demo · v0.1</span>
+  <span class="header-right">Pre‑release demo · v0.2</span>
 </header>
 
 <main>
-
-  <!-- WHY — unchanged, it's the strongest part -->
   <p class="why-statement">
     Financial publishing runs on trust.<br/>
     Trust depends on structural honesty.<br/>
     Structural honesty requires visibility.
   </p>
 
-  <!-- HOW — unchanged -->
   <p class="how-statement">
     ScutLumAi maps the relationship between certainty and evidence —
     sentence by sentence — without scoring, judging, or recommending.
   </p>
 
-  <!-- C4 — Concept prototype note -->
   <p class="concept-note">This is a concept prototype. Sample sentences are illustrative composites, not real filings.</p>
 
-  <!-- DISCLAIMER — unchanged, already strong -->
   <div class="disclaimer">
     Not an AI writing tool. Not a quality assessor. Not a risk rater. Not a recommendation engine.<br/>
     <strong>It detects structure. It describes what it finds. Nothing more.</strong>
   </div>
 
-  <!-- TR1 — Provenance note -->
   <p class="sample-provenance">Sample sentences are illustrative composites — not real filings.</p>
 
-  <!-- C1 — User‑friendly section label -->
   <div class="section-label">SELECT A SENTENCE TO INSPECT</div>
 
   <div class="sample-list" id="sampleList"></div>
 
   <div id="outputArea"><div class="empty-state">Select any sentence above. The engine will show you what it found.</div></div>
 
+  <!-- Gated “Test your own” section -->
+  <div class="test-own-section">
+    <div class="test-own-heading">Want to see your own sentence through the same lens?</div>
+    <div class="test-own-sub">
+      Paste any financial sentence below. We’ll personally analyse it and email you the structural map within 24 hours.
+      Your sentence is not stored, not used for training — deleted after we send the analysis.
+    </div>
+    <form class="test-own-form" id="testOwnForm">
+      <label for="userEmail">Your email (required)</label>
+      <input type="email" id="userEmail" name="email" required placeholder="editor@newsroom.com" />
+
+      <label for="userSentence">Paste your sentence (min. 50 characters)</label>
+      <textarea id="userSentence" name="sentence" rows="4" required placeholder="E.g. 'Our new analytics suite has transformed how we cover markets, delivering unmatched speed and accuracy to subscribers worldwide.'" minlength="50"></textarea>
+
+      <label style="display:flex;align-items:flex-start;gap:8px;">
+        <input type="checkbox" id="willingToShare" name="willingToShare" />
+        <span style="font-weight:400;font-size:11px;">I’d be open to sharing more content for a custom analysis or pilot.</span>
+      </label>
+
+      <button type="submit">Send for analysis</button>
+    </form>
+    <div id="formConfirmation" style="display:none;" class="form-confirmation">
+      Thank you. We’ll email your structural map to <span id="confirmedEmail"></span> within 24 hours.
+      If you’d like to fast‑track, <a href="https://calendly.com/shieldzeroai/scutlumai-pilot-setup-call" style="color:#8BA3BC;border-bottom:1px solid;">book a pilot setup call</a>.
+    </div>
+    <p class="test-own-disclaimer">
+      This is a manual, human‑reviewed demo. No automated classification engine is live yet.
+      By submitting, you agree that we may use the sentence solely for this one‑time analysis and will not retain it afterwards.
+    </p>
+  </div>
 </main>
 
 <footer>
@@ -405,108 +503,82 @@
 
 <div class="cta-block">
   If this is a problem you deal with —
-  <a href="https://www.linkedin.com/in/lentsha-joel-890294173" target="_blank">reach out to Joel on LinkedIn</a>
-  <!-- TR3 — Final trust note -->
+  <a href="https://www.linkedin.com/in/lentsha-joel-890294173" target="_blank">reach out to Lentsha Joel on LinkedIn</a>
   <div class="cta-note">This demo classifies structure, not content veracity. Always verify claims against primary sources.</div>
 </div>
 
 <script>
-  // U1 — Added mixed‑signal grey‑zone sentence
-  // U3 — State names now prefixed with icons
-  // U6 — Added stateLabel for card preview match
+  // ===== CONFIGURATION – replace with your actual Formspree endpoint =====
+  const FORMSPREE_ENDPOINT = https://formspree.io/f/mgodlqdr;
+
+  // Sample data — all state icons removed, pure text descriptions
   const SAMPLES = [
     {
       id: 1,
-      stateLabel: "▸ Unaccompanied",
-      label: "Unhedged future claim",
+      stateLabel: "Unaccompanied",
       sentence: "The company will definitely achieve record revenues next quarter.",
       confidence: ["Unhedged future claim", "Commitment amplifier"],
       support: [],
       modifiers: ["Commitment amplifier"],
-      stateType: "info",
-      stateName: "▸ Unaccompanied",
+      stateName: "Unaccompanied",
       description: "A forward-looking assertion expressed with absolute certainty. No evidentiary support signal is present within this structural unit."
     },
     {
       id: 2,
-      stateLabel: "✓ Fully accompanied",
-      label: "Fully accompanied",
+      stateLabel: "Fully accompanied",
       sentence: "Revenue increased 34% to $2.1 billion, as reported in our Q3 10-Q filing with the SEC.",
       confidence: ["Present state assertion"],
       support: ["Audited figure", "Regulatory filing reference"],
       modifiers: [],
-      stateType: "info",
-      stateName: "✓ Fully accompanied",
+      stateName: "Fully accompanied",
       description: "A quantitative performance claim accompanied by both a verified figure and a named regulatory filing. Structural correspondence: present."
     },
     {
       id: 3,
-      stateLabel: "▸ Cascading unaccompanied",
-      label: "Cascading unaccompanied",
+      stateLabel: "Cascading unaccompanied",
       sentence: "Our revolutionary platform is the undisputed market leader, driving exceptional growth across every segment globally.",
       confidence: ["Superlative market position claim", "Momentum assertion", "Characterization claim"],
       support: [],
       modifiers: ["Scope inflation marker", "Commitment amplifier"],
-      stateType: "info",
-      stateName: "▸ Cascading unaccompanied",
+      stateName: "Cascading unaccompanied",
       description: "Multiple compounding confidence signals — superlative positioning, directional momentum, and qualitative characterization — with no support signal present. Scope inflation detected."
     },
     {
       id: 4,
-      stateLabel: "∼ Hedged, unaccompanied",
-      label: "Hedged, unaccompanied",
+      stateLabel: "Hedged, unaccompanied",
       sentence: "Management believes growth could continue into the following fiscal year.",
       confidence: ["Hedged future claim"],
       support: [],
       modifiers: [],
-      stateType: "info",
-      stateName: "∼ Hedged, unaccompanied",
+      stateName: "Hedged, unaccompanied",
       description: "A forward-looking claim qualified by hedging language. No evidentiary support signal is present. The hedge is structurally noted but does not constitute accompaniment."
     },
     {
       id: 5,
-      stateLabel: "▸ Unaccompanied",
-      label: "Stakeholder universalization",
+      stateLabel: "Unaccompanied",
       sentence: "All stakeholders will benefit from our industry-leading performance.",
       confidence: ["Characterization claim", "Unhedged future claim"],
       support: [],
       modifiers: ["Stakeholder universalization", "Scope inflation marker"],
-      stateType: "info",
-      stateName: "▸ Unaccompanied",
+      stateName: "Unaccompanied",
       description: "A universal beneficiary claim combined with a performance characterization. Stakeholder universalization modifier detected — scope of claim exceeds any available evidentiary basis within this unit."
     },
-    // U1 — Mixed‑signal grey‑zone sentence
     {
       id: 6,
-      stateLabel: "∼ Partially accompanied",
-      label: "Partially accompanied",
+      stateLabel: "Partially accompanied",
       sentence: "Revenue grew 12%, driven largely by the Asia-Pacific segment, which management expects will continue.",
       confidence: ["Present state assertion", "Hedged future claim"],
       support: ["Named segment reference"],
       modifiers: ["Management attribution"],
-      stateType: "info",
-      stateName: "∼ Partially accompanied",
+      stateName: "Partially accompanied",
       description: "A quantitative claim with a named segment reference, combined with a hedged forward-looking statement. Partial structural correspondence detected."
     }
   ];
 
-  // T2 — Taxonomy label now returns a data attribute, not inline styles
-  function labelDataAttribute(label) {
-    const map = {
-      "Unhedged future claim": "unaccompanied",
-      "Fully accompanied": "fully-accompanied",
-      "Cascading unaccompanied": "cascading",
-      "Hedged, unaccompanied": "hedged",
-      "Stakeholder universalization": "unaccompanied",
-      "Partially accompanied": "partially"
-    };
-    return map[label] || "unaccompanied";
-  }
-
   let selected = null;
 
-  function badge(label, type) {
-    return `<span class="badge badge-${type}">${label}</span>`;
+  function badge(label) {
+    return `<span class="badge">${label}</span>`;
   }
 
   function renderOutput(s) {
@@ -520,37 +592,33 @@
           <div class="signals-grid">
             <div>
               <div class="signal-group-label">CONFIDENCE SIGNALS</div>
-              ${s.confidence.length ? s.confidence.map(x => badge(x, 'confidence')).join('') : '<span class="none-detected">none detected</span>'}
+              ${s.confidence.length ? s.confidence.map(x => badge(x)).join('') : '<span class="none-detected">none detected</span>'}
             </div>
             <div>
               <div class="signal-group-label">SUPPORT SIGNALS</div>
-              ${s.support.length ? s.support.map(x => badge(x, 'support')).join('') : '<span class="none-detected">none detected</span>'}
+              ${s.support.length ? s.support.map(x => badge(x)).join('') : '<span class="none-detected">none detected</span>'}
             </div>
           </div>
           ${s.modifiers.length ? `
             <div class="modifiers-row">
               <div class="signal-group-label">SIGNAL MODIFIERS</div>
-              ${s.modifiers.map(x => badge(x, 'modifier')).join('')}
+              ${s.modifiers.map(x => badge(x)).join('')}
             </div>` : ''}
-          <!-- U2 — All state boxes now uniform monochrome; U3 — icon‑prefixed state name -->
           <div class="state-box">
             <div class="state-label-small">STRUCTURAL STATE</div>
             <div class="state-name">${s.stateName}</div>
             <div class="state-description">${s.description}</div>
           </div>
         </div>
-        <!-- TR2 — Strengthened output footer -->
         <div class="output-footer">
           Structural description only. Pattern names (e.g., 'Unaccompanied') describe signal relationships observed in our research. They are not quality scores. Interpretation remains with the human editor. · engine MVP-1.0 · taxonomy DEMO-SUBSET-1
         </div>
       </div>
-      <!-- U5 — Next‑step prompt -->
       <div class="next-step">In the full product: inspect an entire article for sentence‑level signal patterns.</div>`;
   }
 
   function renderSamples() {
     const list = document.getElementById('sampleList');
-    // T3 — Guard clause for empty SAMPLES
     if (!SAMPLES.length) {
       list.innerHTML = '<div class="empty-state">No sample sentences loaded.</div>';
       return;
@@ -560,8 +628,7 @@
         <span class="sample-num">${String(i + 1).padStart(2, '0')}</span>
         <div>
           <div class="sample-sentence">${s.sentence}</div>
-          <!-- U6 — Card label now shows stateLabel, matching output headline -->
-          <span class="taxonomy-label" data-type="${labelDataAttribute(s.label)}">${s.stateLabel}</span>
+          <span class="taxonomy-label">${s.stateLabel}</span>
         </div>
       </button>`).join('');
   }
@@ -571,6 +638,55 @@
     renderSamples();
     document.getElementById('outputArea').innerHTML = renderOutput(SAMPLES[i]);
   }
+
+  // ---------- Formspree submission handler ----------
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('testOwnForm');
+    const email = document.getElementById('userEmail').value.trim();
+    const sentence = document.getElementById('userSentence').value.trim();
+    const willing = document.getElementById('willingToShare').checked;
+
+    if (!email || !sentence || sentence.length < 50) {
+      alert('Please provide a valid email and a sentence of at least 50 characters.');
+      return;
+    }
+
+    const button = form.querySelector('button');
+    button.disabled = true;
+    button.textContent = 'Sending...';
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          sentence: sentence,
+          willingToShare: willing,
+          _subject: 'New ScutLumAi Demo Lead'
+        })
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        const confirmation = document.getElementById('formConfirmation');
+        confirmation.style.display = 'block';
+        document.getElementById('confirmedEmail').textContent = email;
+      } else {
+        alert('Something went wrong. Please try again later or email us directly.');
+        button.disabled = false;
+        button.textContent = 'Send for analysis';
+      }
+    } catch (error) {
+      alert('Network error. Please check your connection and try again.');
+      button.disabled = false;
+      button.textContent = 'Send for analysis';
+    }
+  }
+
+  document.getElementById('testOwnForm').addEventListener('submit', handleSubmit);
 
   renderSamples();
 </script>
