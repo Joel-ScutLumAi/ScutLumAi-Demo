@@ -167,7 +167,6 @@
     .sample-sentence { font-size: 13px; color: #F0F4F8; margin-bottom: 3px; line-height: 1.55; }
     .sample-btn.active .sample-sentence { font-weight: 500; color: #F0F4F8; }
 
-    /* Neutral state label on cards – no icon, no colour difference */
     .taxonomy-label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
@@ -180,7 +179,6 @@
       border: 0.5px solid rgba(139, 163, 188, 0.2);
     }
 
-    /* Badges — descriptive micro‑signals, monochrome */
     .badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 2px 8px; border-radius: 6px; margin-right: 4px; margin-bottom: 4px; border: 0.5px solid rgba(139, 163, 188, 0.2); color: #C8D6E5; background: rgba(255,255,255,0.03); }
     .none-detected { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(139, 163, 188, 0.35); }
 
@@ -230,7 +228,6 @@
 
     .modifiers-row { margin-bottom: 20px; }
 
-    /* Completely neutral state box – single thin left border, no icon, no colour variation */
     .state-box {
       padding: 14px 16px;
       border-radius: 0 10px 10px 0;
@@ -292,7 +289,6 @@
       color: #8BA3BC;
     }
 
-    /* Gated “Test your own” section */
     .test-own-section {
       margin-top: 40px;
       border-top: 0.5px solid rgba(255,255,255,0.08);
@@ -465,30 +461,30 @@
 
   <div id="outputArea"><div class="empty-state">Select any sentence above. The engine will show you what it found.</div></div>
 
-  <!-- Gated “Test your own” section -->
+  <!-- Gated "Test your own" section -->
   <div class="test-own-section">
     <div class="test-own-heading">Want to see your own sentence through the same lens?</div>
     <div class="test-own-sub">
-      Paste any financial sentence below. We’ll personally analyse it and email you the structural map within 24 hours.
+      Paste any financial sentence below. We'll personally analyse it and email you the structural map within 24 hours.
       Your sentence is not stored, not used for training — deleted after we send the analysis.
     </div>
     <form class="test-own-form" id="testOwnForm">
       <label for="userEmail">Your email (required)</label>
-      <input type="email" id="userEmail" name="email" required placeholder="editor@newsroom.com" />
+      <input type="email" id="userEmail" name="email" required placeholder="editor@newsroom.com" autocomplete="email" />
 
       <label for="userSentence">Paste your sentence (min. 50 characters)</label>
-      <textarea id="userSentence" name="sentence" rows="4" required placeholder="E.g. 'Our new analytics suite has transformed how we cover markets, delivering unmatched speed and accuracy to subscribers worldwide.'" minlength="50"></textarea>
+      <textarea id="userSentence" name="sentence" rows="4" required placeholder="E.g. 'Our new analytics suite has transformed how we cover markets, delivering unmatched speed and accuracy to subscribers worldwide.'" minlength="50" autocomplete="off"></textarea>
 
       <label style="display:flex;align-items:flex-start;gap:8px;">
-        <input type="checkbox" id="willingToShare" name="willingToShare" />
-        <span style="font-weight:400;font-size:11px;">I’d be open to sharing more content for a custom analysis or pilot.</span>
+        <input type="checkbox" id="willingToShare" name="willingToShare" autocomplete="off" />
+        <span style="font-weight:400;font-size:11px;">I'd be open to sharing more content for a custom analysis or pilot.</span>
       </label>
 
       <button type="submit">Send for analysis</button>
     </form>
     <div id="formConfirmation" style="display:none;" class="form-confirmation">
-      Thank you. We’ll email your structural map to <span id="confirmedEmail"></span> within 24 hours.
-      If you’d like to fast‑track, <a href="https://calendly.com/shieldzeroai/scutlumai-pilot-setup-call" style="color:#8BA3BC;border-bottom:1px solid;">book a pilot setup call</a>.
+      Thank you. We'll email your structural map to <span id="confirmedEmail"></span> within 24 hours.
+      If you'd like to fast‑track, <a href="https://calendly.com/shieldzeroai/scutlumai-pilot-setup-call" style="color:#8BA3BC;border-bottom:1px solid;">book a pilot setup call</a>.
     </div>
     <p class="test-own-disclaimer">
       This is a manual, human‑reviewed demo. No automated classification engine is live yet.
@@ -508,8 +504,8 @@
 </div>
 
 <script>
-  // ===== CONFIGURATION – replace with your actual Formspree endpoint =====
-  const FORMSPREE_ENDPOINT = https://formspree.io/f/mgodlqdr;
+  // ===== CONFIGURATION — Formspree endpoint (FIXED: added quotes) =====
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgodlqdr';
 
   // Sample data — all state icons removed, pure text descriptions
   const SAMPLES = [
