@@ -57,7 +57,28 @@
     main {
       max-width: 760px;
       margin: 0 auto;
-      padding: 48px 24px 40px;
+      padding: 0 24px 40px;
+    }
+
+    /* ===== PROVENANCE BANNER – single, top-placed ===== */
+    .provenance-banner {
+      text-align: center;
+      padding: 10px 18px;
+      margin-top: 24px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: rgba(139, 163, 188, 0.45);
+      background: rgba(255, 255, 255, 0.015);
+      border: 0.5px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      line-height: 1.5;
+    }
+
+    /* ===== HERO ZONE – manifesto, how, disclaimer ===== */
+    .hero-zone {
+      padding-top: 40px;
+      padding-bottom: 36px;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
     }
 
     .why-statement {
@@ -75,16 +96,7 @@
       line-height: 1.8;
       color: #8BA3BC;
       max-width: 580px;
-      margin-bottom: 12px;
-    }
-
-    .concept-note {
-      font-size: 12px;
-      line-height: 1.7;
-      color: rgba(139, 163, 188, 0.55);
-      max-width: 580px;
       margin-bottom: 18px;
-      font-style: italic;
     }
 
     .disclaimer {
@@ -92,7 +104,6 @@
       border: 0.5px solid rgba(255, 255, 255, 0.08);
       border-radius: 10px;
       padding: 13px 18px;
-      margin-bottom: 14px;
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
       line-height: 1.8;
@@ -101,12 +112,13 @@
 
     .disclaimer strong { font-weight: 500; color: #F0F4F8; }
 
-    .sample-provenance {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: rgba(139, 163, 188, 0.4);
-      margin-bottom: 28px;
-      line-height: 1.6;
+    /* ===== DEMO ZONE – clearly bounded interactive module ===== */
+    .demo-zone {
+      margin-top: 36px;
+      padding: 28px 24px 24px;
+      background: rgba(255, 255, 255, 0.012);
+      border: 0.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
     }
 
     .section-label {
@@ -114,7 +126,7 @@
       font-size: 11px;
       color: #8BA3BC;
       letter-spacing: 0.06em;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .sample-list {
@@ -289,10 +301,11 @@
       color: #8BA3BC;
     }
 
-    .test-own-section {
+    /* ===== LEAD-CAPTURE ZONE ===== */
+    .lead-zone {
       margin-top: 40px;
-      border-top: 0.5px solid rgba(255,255,255,0.08);
       padding-top: 32px;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.08);
     }
 
     .test-own-heading {
@@ -306,7 +319,7 @@
       font-size: 12px;
       line-height: 1.6;
       color: #8BA3BC;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       max-width: 500px;
     }
 
@@ -359,12 +372,16 @@
       background: #243B5A;
     }
 
-    .test-own-disclaimer {
+    /* ===== MANUAL-REVIEW FOOTNOTE – deliberate, calm ===== */
+    .manual-review-note {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.06);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 10px;
-      color: rgba(139,163,188,0.4);
-      margin-top: -6px;
-      line-height: 1.5;
+      color: rgba(139, 163, 188, 0.35);
+      line-height: 1.7;
+      text-align: center;
     }
 
     .form-confirmation {
@@ -378,6 +395,7 @@
       padding: 14px 18px;
     }
 
+    /* ===== CTA & FOOTER ===== */
     .cta-block {
       text-align: center;
       padding: 32px 24px 20px;
@@ -415,12 +433,14 @@
       font-size: 11px;
       color: #8BA3BC;
       line-height: 1.8;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
       .signals-grid { grid-template-columns: 1fr; }
       .header-right { display: none; }
       .why-statement { font-size: 20px; }
+      .demo-zone { padding: 20px 16px 16px; }
     }
   </style>
 </head>
@@ -431,43 +451,54 @@
     <span class="logo">ScutLumAi</span>
     <span class="pill">SENTENCE‑LEVEL EVIDENCE MAPPING</span>
   </div>
-  <span class="header-right">Pre‑release demo · v0.2</span>
+  <span class="header-right">Pre‑release demo · v0.3</span>
 </header>
 
 <main>
-  <p class="why-statement">
-    Financial publishing runs on trust.<br/>
-    Trust depends on structural honesty.<br/>
-    Structural honesty requires visibility.
-  </p>
 
-  <p class="how-statement">
-    ScutLumAi maps the relationship between certainty and evidence —
-    sentence by sentence — without scoring, judging, or recommending.
-  </p>
-
-  <p class="concept-note">This is a concept prototype. Sample sentences are illustrative composites, not real filings.</p>
-
-  <div class="disclaimer">
-    Not an AI writing tool. Not a quality assessor. Not a risk rater. Not a recommendation engine.<br/>
-    <strong>It detects structure. It describes what it finds. Nothing more.</strong>
+  <!-- Provenance banner – single, top-placed, sets expectation once -->
+  <div class="provenance-banner">
+    This is a concept prototype. Sample sentences are illustrative composites, not real filings.
   </div>
 
-  <p class="sample-provenance">Sample sentences are illustrative composites — not real filings.</p>
+  <!-- HERO ZONE -->
+  <section class="hero-zone">
+    <p class="why-statement">
+      Financial publishing runs on trust.<br/>
+      Trust depends on structural honesty.<br/>
+      Structural honesty requires visibility.
+    </p>
 
-  <div class="section-label">SELECT A SENTENCE TO INSPECT</div>
+    <p class="how-statement">
+      ScutLumAi maps the relationship between certainty and evidence —
+      sentence by sentence — without scoring, judging, or recommending.
+    </p>
 
-  <div class="sample-list" id="sampleList"></div>
+    <div class="disclaimer">
+      Not an AI writing tool. Not a quality assessor. Not a risk rater. Not a recommendation engine.<br/>
+      <strong>It detects structure. It describes what it finds. Nothing more.</strong>
+    </div>
+  </section>
 
-  <div id="outputArea"><div class="empty-state">Select any sentence above. The engine will show you what it found.</div></div>
+  <!-- DEMO ZONE – interactive module -->
+  <section class="demo-zone">
+    <div class="section-label">SELECT A SENTENCE TO INSPECT</div>
 
-  <!-- Gated "Test your own" section -->
-  <div class="test-own-section">
+    <div class="sample-list" id="sampleList"></div>
+
+    <div id="outputArea">
+      <div class="empty-state">Select any sentence above. The engine will show you what it found.</div>
+    </div>
+  </section>
+
+  <!-- LEAD-CAPTURE ZONE -->
+  <section class="lead-zone">
     <div class="test-own-heading">Want to see your own sentence through the same lens?</div>
     <div class="test-own-sub">
       Paste any financial sentence below. We'll personally analyse it and email you the structural map within 24 hours.
       Your sentence is not stored, not used for training — deleted after we send the analysis.
     </div>
+
     <form class="test-own-form" id="testOwnForm">
       <label for="userEmail">Your email (required)</label>
       <input type="email" id="userEmail" name="email" required placeholder="editor@newsroom.com" autocomplete="email" />
@@ -482,15 +513,19 @@
 
       <button type="submit">Send for analysis</button>
     </form>
+
+    <!-- Deliberate, calm footnote – below the form, with breathing room -->
+    <p class="manual-review-note">
+      This is a manual, human‑reviewed demo. No automated classification engine is live yet.
+      By submitting, you agree that we may use the sentence solely for this one‑time analysis and will not retain it afterwards.
+    </p>
+
     <div id="formConfirmation" style="display:none;" class="form-confirmation">
       Thank you. We'll email your structural map to <span id="confirmedEmail"></span> within 24 hours.
       If you'd like to fast‑track, <a href="https://calendly.com/shieldzeroai/scutlumai-pilot-setup-call" style="color:#8BA3BC;border-bottom:1px solid;">book a pilot setup call</a>.
     </div>
-    <p class="test-own-disclaimer">
-      This is a manual, human‑reviewed demo. No automated classification engine is live yet.
-      By submitting, you agree that we may use the sentence solely for this one‑time analysis and will not retain it afterwards.
-    </p>
-  </div>
+  </section>
+
 </main>
 
 <footer>
@@ -504,10 +539,9 @@
 </div>
 
 <script>
-  // ===== CONFIGURATION — Formspree endpoint (FIXED: added quotes) =====
+  // ===== CONFIGURATION =====
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgodlqdr';
 
-  // Sample data — all state icons removed, pure text descriptions
   const SAMPLES = [
     {
       id: 1,
@@ -635,7 +669,6 @@
     document.getElementById('outputArea').innerHTML = renderOutput(SAMPLES[i]);
   }
 
-  // ---------- Formspree submission handler ----------
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -667,6 +700,7 @@
 
       if (response.ok) {
         form.style.display = 'none';
+        document.querySelector('.manual-review-note').style.display = 'none';
         const confirmation = document.getElementById('formConfirmation');
         confirmation.style.display = 'block';
         document.getElementById('confirmedEmail').textContent = email;
