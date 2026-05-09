@@ -79,6 +79,7 @@
       padding-top: 40px;
       padding-bottom: 36px;
       border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+      text-align: center;               /* center all content in the hero */
     }
 
     .why-statement {
@@ -87,7 +88,7 @@
       letter-spacing: -0.025em;
       line-height: 1.45;
       color: #F0F4F8;
-      margin-bottom: 16px;
+      margin: 0 auto 16px auto;
       max-width: 640px;
     }
 
@@ -96,7 +97,7 @@
       line-height: 1.8;
       color: #8BA3BC;
       max-width: 580px;
-      margin-bottom: 18px;
+      margin: 0 auto 18px auto;
     }
 
     .disclaimer {
@@ -108,6 +109,8 @@
       font-size: 11px;
       line-height: 1.8;
       color: #8BA3BC;
+      display: inline-block;            /* shrink to fit text */
+      text-align: left;
     }
 
     .disclaimer strong { font-weight: 500; color: #F0F4F8; }
@@ -461,11 +464,13 @@
     This is a concept prototype. Sample sentences are illustrative composites, not real filings.
   </div>
 
-  <!-- HERO ZONE -->
+  <!-- HERO ZONE – centered manifesto -->
   <section class="hero-zone">
     <p class="why-statement">
       Financial publishing runs on trust.<br/>
-      Trust depends on structural honesty.<br/>
+      Trust depends on structural honesty.
+    </p>
+    <p class="why-statement" style="margin-top: 0;">
       Structural honesty requires visibility.
     </p>
 
